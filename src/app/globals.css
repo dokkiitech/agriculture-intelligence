@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #eef6ee;
+  --foreground: #1e2a1e;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #c8d7c8;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.row,
+.grid2 {
+  display: grid;
+  gap: 12px;
+}
+
+.grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border: 1px solid #9db39d;
+  border-radius: 8px;
+  background: #fff;
+}
+
+button {
+  width: auto;
+  cursor: pointer;
+  background: #2f6f3e;
+  color: #fff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.theme-garden {
+  background: linear-gradient(180deg, #e9f8e9 0%, #f7fff4 100%);
+}
+
+.theme-wood {
+  background: linear-gradient(180deg, #f3e8da 0%, #fff8ed 100%);
+}
+
+.theme-kids {
+  background: linear-gradient(180deg, #e2f0ff 0%, #fff6fc 100%);
 }

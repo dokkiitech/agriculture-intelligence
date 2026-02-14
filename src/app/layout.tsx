@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "agriculture intelligence",
-  description: "agriculture intelligence app",
+  title: "家庭菜園AIモック",
+  description: "仕様書ベースの家庭菜園支援MVPモック",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className="antialiased">{children}</body>
     </html>
   );
